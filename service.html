@@ -84,7 +84,7 @@
                             Database Design
                         </li>
                     </ul>
-                    <button class="emotional-btn w-full bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300">
+                    <button class="learn-more-btn emotional-btn w-full bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300" data-service="web-development">
                         Learn More
                     </button>
                 </div>
@@ -120,7 +120,7 @@
                             Prototyping
                         </li>
                     </ul>
-                    <button class="emotional-btn w-full bg-gradient-to-r from-purple-400 to-pink-500 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300">
+                    <button class="learn-more-btn emotional-btn w-full bg-gradient-to-r from-purple-400 to-pink-500 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300" data-service="ui-ux-design">
                         Learn More
                     </button>
                 </div>
@@ -156,7 +156,7 @@
                             iOS & Android
                         </li>
                     </ul>
-                    <button class="emotional-btn w-full bg-gradient-to-r from-green-400 to-cyan-500 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300">
+                    <button class="learn-more-btn emotional-btn w-full bg-gradient-to-r from-green-400 to-cyan-500 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300" data-service="mobile-development">
                         Learn More
                     </button>
                 </div>
@@ -193,7 +193,7 @@
                             Content Strategy
                         </li>
                     </ul>
-                    <button class="emotional-btn w-full bg-gradient-to-r from-orange-400 to-red-500 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300">
+                    <button class="learn-more-btn emotional-btn w-full bg-gradient-to-r from-orange-400 to-red-500 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300" data-service="digital-marketing">
                         Learn More
                     </button>
                 </div>
@@ -229,7 +229,7 @@
                             Inventory Management
                         </li>
                     </ul>
-                    <button class="emotional-btn w-full bg-gradient-to-r from-indigo-400 to-purple-500 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300">
+                    <button class="learn-more-btn emotional-btn w-full bg-gradient-to-r from-indigo-400 to-purple-500 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300" data-service="e-commerce">
                         Learn More
                     </button>
                 </div>
@@ -265,9 +265,130 @@
                             Performance Optimization
                         </li>
                     </ul>
-                    <button class="emotional-btn w-full bg-gradient-to-r from-teal-400 to-cyan-500 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300">
+                    <button class="learn-more-btn emotional-btn w-full bg-gradient-to-r from-teal-400 to-cyan-500 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300" data-service="consulting">
                         Learn More
                     </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="serviceModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden opacity-0 transition-opacity duration-300">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="glass-card bg-gradient-to-br from-indigo-400 to-purple-500 p-8 rounded-3xl max-w-2xl w-full relative transform scale-95 transition-transform duration-300">
+                <button id="closeModal" class="absolute top-4 right-4 text-white hover:text-cyan-400 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+                <h2 class="text-3xl font-bold mb-6 text-white text-center">Learn More About Our Service</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="requirements">
+                        <h3 class="text-xl font-semibold mb-4 text-cyan-200">Project Requirements (Syarat)</h3>
+                        <ul class="space-y-2 text-slate-200">
+                            <!-- Content will be dynamically updated -->
+                        </ul>
+                    </div>
+                    <div class="benefits">
+                        <h3 class="text-xl font-semibold mb-4 text-cyan-200">Service Benefits (Keuntungan)</h3>
+                        <ul class="space-y-2 text-slate-200">
+                            <!-- Content will be dynamically updated -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="text-center mt-8">
+                    <button id="startProjectModalBtn" class="emotional-btn bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300">
+                        Start Your Project
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features/Benefits Section -->
+    <section class="py-24 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                    Why Choose Premium?
+                </h2>
+                <p class="text-xl text-slate-300 max-w-3xl mx-auto">
+                    Our unique selling points that set us apart and guarantee your success.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="benefit-card glass-card p-8 rounded-3xl text-center hover:scale-105 transition-all duration-300 group">
+                    <div class="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl mb-6 flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Lightning Fast Delivery</h3>
+                    <p class="text-slate-300 leading-relaxed">
+                        We deliver high-quality projects in record time without compromising on excellence. Our streamlined processes ensure quick turnaround while maintaining premium standards.
+                    </p>
+                </div>
+
+                <div class="benefit-card glass-card p-8 rounded-3xl text-center hover:scale-105 transition-all duration-300 group">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl mb-6 flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">24/7 Support</h3>
+                    <p class="text-slate-300 leading-relaxed">
+                        Round-the-clock technical support and maintenance. Our dedicated team is always available to help you succeed, ensuring your project runs smoothly at all times.
+                    </p>
+                </div>
+
+                <div class="benefit-card glass-card p-8 rounded-3xl text-center hover:scale-105 transition-all duration-300 group">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-400 to-cyan-500 rounded-2xl mb-6 flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Premium Quality</h3>
+                    <p class="text-slate-300 leading-relaxed">
+                        Every project undergoes rigorous quality assurance. We use cutting-edge technologies and follow industry best practices to deliver exceptional results.
+                    </p>
+                </div>
+
+                <div class="benefit-card glass-card p-8 rounded-3xl text-center hover:scale-105 transition-all duration-300 group">
+                    <div class="w-16 h-16 bg-gradient-to-br from-orange-400 to-red-500 rounded-2xl mb-6 flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Expert Team</h3>
+                    <p class="text-slate-300 leading-relaxed">
+                        Our team consists of seasoned professionals with years of experience in their respective fields. We bring diverse expertise to every project.
+                    </p>
+                </div>
+
+                <div class="benefit-card glass-card p-8 rounded-3xl text-center hover:scale-105 transition-all duration-300 group">
+                    <div class="w-16 h-16 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-2xl mb-6 flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Proven Results</h3>
+                    <p class="text-slate-300 leading-relaxed">
+                        Track record of successful projects with measurable outcomes. Our clients see real growth and ROI from our digital solutions.
+                    </p>
+                </div>
+
+                <div class="benefit-card glass-card p-8 rounded-3xl text-center hover:scale-105 transition-all duration-300 group">
+                    <div class="w-16 h-16 bg-gradient-to-br from-teal-400 to-cyan-500 rounded-2xl mb-6 flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Client Satisfaction</h3>
+                    <p class="text-slate-300 leading-relaxed">
+                        100% client satisfaction guarantee. We work closely with you throughout the process and ensure the final product exceeds your expectations.
+                    </p>
                 </div>
             </div>
         </div>
@@ -339,13 +460,81 @@
                 Let's discuss your project and create something extraordinary together.
             </p>
             <div class="flex flex-col sm:flex-row gap-6 justify-center">
-                <button class="emotional-btn bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl hover:shadow-cyan-400/30 transition-all duration-300">
+                <button id="startProjectBtn" class="emotional-btn bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl hover:shadow-cyan-400/30 transition-all duration-300">
                     Start Your Project
                 </button>
                 <a href="contact.html" class="border-2 border-slate-600 text-slate-300 px-8 py-4 rounded-full font-semibold text-lg hover:border-cyan-400 hover:text-cyan-400 transition-all duration-300 text-center">
                     Contact Us
                 </a>
             </div>
+        </div>
+    </section>
+
+    <!-- Project Form Section -->
+    <section id="project-form" class="py-24 bg-slate-900/50">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                    Tell Us About Your Project
+                </h2>
+                <p class="text-xl text-slate-300 max-w-2xl mx-auto">
+                    Share your vision and requirements so we can provide a tailored solution for your needs.
+                </p>
+            </div>
+
+            <form class="space-y-8">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="projectName" class="block text-slate-300 mb-2 font-medium">Project Name</label>
+                        <input type="text" id="projectName" name="projectName" class="w-full px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-lg focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300 text-white placeholder-slate-400" placeholder="My Awesome Project">
+                    </div>
+                    <div>
+                        <label for="projectType" class="block text-slate-300 mb-2 font-medium">Project Type</label>
+                        <select id="projectType" name="projectType" class="w-full px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-lg focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300 text-white">
+                            <option value="" class="bg-slate-800">Select project type</option>
+                            <option value="web-development" class="bg-slate-800">Web Development</option>
+                            <option value="mobile-app" class="bg-slate-800">Mobile App</option>
+                            <option value="e-commerce" class="bg-slate-800">E-commerce</option>
+                            <option value="branding" class="bg-slate-800">Branding & Design</option>
+                            <option value="consulting" class="bg-slate-800">Consulting</option>
+                            <option value="other" class="bg-slate-800">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="projectBudget" class="block text-slate-300 mb-2 font-medium">Budget Range</label>
+                    <select id="projectBudget" name="projectBudget" class="w-full px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-lg focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300 text-white">
+                        <option value="" class="bg-slate-800">Select budget range</option>
+                        <option value="under-5k" class="bg-slate-800">Under $5,000</option>
+                        <option value="5k-15k" class="bg-slate-800">$5,000 - $15,000</option>
+                        <option value="15k-50k" class="bg-slate-800">$15,000 - $50,000</option>
+                        <option value="over-50k" class="bg-slate-800">Over $50,000</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="projectTimeline" class="block text-slate-300 mb-2 font-medium">Timeline</label>
+                    <select id="projectTimeline" name="projectTimeline" class="w-full px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-lg focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300 text-white">
+                        <option value="" class="bg-slate-800">Select timeline</option>
+                        <option value="asap" class="bg-slate-800">ASAP</option>
+                        <option value="1-3-months" class="bg-slate-800">1-3 Months</option>
+                        <option value="3-6-months" class="bg-slate-800">3-6 Months</option>
+                        <option value="6-months-plus" class="bg-slate-800">6+ Months</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="projectDescription" class="block text-slate-300 mb-2 font-medium">Project Description</label>
+                    <textarea id="projectDescription" name="projectDescription" rows="6" class="w-full px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-lg focus:border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/20 transition-all duration-300 text-white placeholder-slate-400 resize-none" placeholder="Describe your project goals, features, and any specific requirements..."></textarea>
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="emotional-btn bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl hover:shadow-cyan-400/30 transition-all duration-300">
+                        Submit Project Inquiry
+                    </button>
+                </div>
+            </form>
         </div>
     </section>
 
@@ -377,6 +566,142 @@
     </footer>
 
     <script src="js/animations.js"></script>
+    <script>
+        // Smooth scroll to project form
+        document.getElementById('startProjectBtn').addEventListener('click', function() {
+            document.getElementById('project-form').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // Handle project form submission with Fetch API
+        document.querySelector('#project-form form').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent the default form submission
+
+            const form = e.target;
+            const formData = new FormData(form);
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Success'); // Display success message
+                    form.reset(); // Clear all input fields
+                } else {
+                    alert('Error sending message');
+                }
+            })
+            .catch(error => {
+                alert('Error: ' + error.message);
+            });
+        });
+
+        // Service data
+        const serviceData = {
+            'web-development': {
+                requirements: ['Domain name', 'Hosting account', 'Content assets'],
+                benefits: ['Responsive design', 'Fast loading', 'SEO friendly']
+            },
+            'ui-ux-design': {
+                requirements: ['Brand guidelines', 'User personas', 'Existing design assets'],
+                benefits: ['Improved user experience', 'Higher conversion rates', 'Modern aesthetics']
+            },
+            'mobile-development': {
+                requirements: ['App concept', 'Target platforms', 'API requirements'],
+                benefits: ['Native performance', 'Cross-platform compatibility', 'App store optimization']
+            },
+            'digital-marketing': {
+                requirements: ['Target audience data', 'Marketing goals', 'Content calendar'],
+                benefits: ['Increased visibility', 'Lead generation', 'Brand awareness']
+            },
+            'e-commerce': {
+                requirements: ['Product list', 'Branding assets', 'Payment gateway account'],
+                benefits: ['24/7 Support', 'Mobile-responsive design', 'SEO Optimization']
+            },
+            'consulting': {
+                requirements: ['Current business challenges', 'Technical documentation', 'Project timeline'],
+                benefits: ['Strategic guidance', 'Process optimization', 'Expert insights']
+            }
+        };
+
+        // Modal functionality
+        const modal = document.getElementById('serviceModal');
+        const closeModalBtn = document.getElementById('closeModal');
+        const startProjectModalBtn = document.getElementById('startProjectModalBtn');
+        const learnMoreBtns = document.querySelectorAll('.learn-more-btn');
+
+        // Open modal
+        learnMoreBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const service = this.getAttribute('data-service');
+                const data = serviceData[service];
+                if (data) {
+                    // Update modal title
+                    modal.querySelector('h2').textContent = `Learn More About ${this.parentElement.querySelector('h3').textContent}`;
+
+                    // Update requirements
+                    const requirementsList = modal.querySelector('.requirements ul');
+                    requirementsList.innerHTML = '';
+                    data.requirements.forEach(req => {
+                        const li = document.createElement('li');
+                        li.className = 'flex items-center';
+                        li.innerHTML = `
+                            <svg class="w-4 h-4 text-cyan-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            ${req}
+                        `;
+                        requirementsList.appendChild(li);
+                    });
+
+                    // Update benefits
+                    const benefitsList = modal.querySelector('.benefits ul');
+                    benefitsList.innerHTML = '';
+                    data.benefits.forEach(benefit => {
+                        const li = document.createElement('li');
+                        li.className = 'flex items-center';
+                        li.innerHTML = `
+                            <svg class="w-4 h-4 text-cyan-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            ${benefit}
+                        `;
+                        benefitsList.appendChild(li);
+                    });
+                }
+
+                modal.classList.remove('hidden');
+                setTimeout(() => {
+                    modal.classList.remove('opacity-0');
+                    modal.querySelector('.flex').classList.remove('scale-95');
+                }, 10);
+            });
+        });
+
+        // Close modal
+        closeModalBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        function closeModal() {
+            modal.classList.add('opacity-0');
+            modal.querySelector('.flex').classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+
+        // Start project button in modal
+        startProjectModalBtn.addEventListener('click', function() {
+            closeModal();
+            setTimeout(() => {
+                document.getElementById('project-form').scrollIntoView({ behavior: 'smooth' });
+            }, 300);
+        });
+    </script>
 </body>
 </html>
                    
